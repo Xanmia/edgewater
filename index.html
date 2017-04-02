@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Edgewater</title>
+
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="style/jumbotron-narrow.css" rel="stylesheet">
+    <link href="style/added.css" rel="stylesheet">
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+
+  <body ng-app="edgewater">
+
+    <div class="container">
+      <div class="header clearfix" ng-controller="headerCtrl">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ng-class="{ active: isActive('/')}"><a href="#">Home</a></li>
+            <li role="presentation" ng-class="{ active: isActive('/contractors')}"><a href="#!/contractors">Contractors</a></li>
+            <li role="presentation" ng-class="{ active: isActive('/jobs')}"><a href="#!/jobs">Jobs</a></li>
+            <li role="presentation" ng-class="{ active: isActive('/contact')}"><a href="#!/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted"><a href="#"><img src="assets/edgewater.png" width="40" height="40" />Edgewater</a></h3>
+      </div>
+
+     <div ng-view></div>
+
+      <footer class="footer">
+        <p>&copy; 2017 Edgewater Investments LLC</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
