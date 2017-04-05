@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
+    
+    <meta name="description" content="edgewater jobs">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="assets/favicon.ico">
 
     <title>Edgewater</title>
 
@@ -24,13 +24,13 @@
   <body ng-app="edgewater">
 
     <div class="container">
-      <div class="header clearfix" ng-controller="headerCtrl">
+      <div class="header clearfix" ng-controller="headerCtrl as header">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" ng-class="{ active: isActive('/')}"><a href="#">Home</a></li>
-            <li role="presentation" ng-class="{ active: isActive('/contractors')}"><a href="#!/contractors">Contractors</a></li>
-            <li role="presentation" ng-class="{ active: isActive('/jobs')}"><a href="#!/jobs">Jobs</a></li>
-            <li role="presentation" ng-class="{ active: isActive('/contact')}"><a href="#!/contact">Contact</a></li>
+            <li role="presentation" ng-class="{ active: header.isActive('/')}"><a href="#">Home</a></li>
+            <li role="presentation" ng-class="{ active: header.isActive('/contractors')}"><a href="#!/contractors">Contractors</a></li>
+            <li role="presentation" ng-class="{ active: header.isActive('/jobs')}"><a href="#!/jobs">Jobs</a></li>
+            <li role="presentation" ng-class="{ active: header.isActive('/contact')}"><a href="#!/contact">Contact</a></li>
           </ul>
         </nav>
         <h3 class="text-muted"><a href="#"><img src="assets/edgewater.png" width="40" height="40" />Edgewater</a></h3>

@@ -20,18 +20,16 @@ angular.module('edgewater', ['ngRoute'])
             });
 
     })
-    .controller('headerCtrl', function ($scope, $location) {
-        $scope.isActive = function (viewLocation) {
+    .controller('headerCtrl', function ($location) {
+        this.isActive = function (viewLocation) {
             return viewLocation === $location.path();
         };
     })
-    .controller('newContactCtrl', function ($location) {
-        var newContact = this;
-        // var woId = $routeParams.woId;
-        //qcCheckpoint.items = [];
+    .controller('newContactCtrl', function () {
+        //placeholder for new contact
 
-        newContact.save = function () {
-
+        this.save = function () {
+            alert('yes');
         };
     });
 
