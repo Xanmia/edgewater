@@ -29,7 +29,7 @@ angular.module('edgewater', ['ngRoute'])
         //placeholder for new contact
 
         this.save = function () {
-            alert('yes');
+
         };
     });
 
